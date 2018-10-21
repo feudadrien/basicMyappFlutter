@@ -162,15 +162,22 @@ class ChatMessage extends StatelessWidget {
             child: new CircleAvatar(child: new Text(_name[0])),
           ),
           new Expanded(
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                new Text(_name, style: Theme.of(context).textTheme.subhead),
-                new Container(
-                  margin: const EdgeInsets.only(top: 5.0),
-                  child: new Text(text),
-                ),
-              ],
+            child: Container(
+              padding: new EdgeInsets.all(10.0),
+              decoration: new BoxDecoration(
+                color: Colors.grey,
+                borderRadius: new BorderRadius.circular(8.0),
+              ),
+              child: new Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  new Text(_name, style: Theme.of(context).textTheme.subhead),
+                  new Container(
+                    margin: const EdgeInsets.only(top: 5.0),
+                    child: new Text(text),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
